@@ -1,0 +1,34 @@
+.extra__title {
+  margin-bottom: 40px;
+}
+
+.extra__filter {
+  border: none;
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .extra__title {
+    margin-bottom: 65px;
+  }
+
+  .extra__filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 5.2%;
+    margin-right: 5.7%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra {
+    width: 93.8%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .extra__filter {
+    margin: 0;
+  }
+}

@@ -1,0 +1,132 @@
+.program-filters__box {
+  width: 87.5%;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  padding: 0;
+
+  border: none;
+}
+
+.program-filters__box--program {
+  width: 100%;
+}
+
+.program-filters__wrapper {
+  margin-bottom: 29px;
+}
+
+.program-filters__box--contacts {
+  margin-bottom: 18px;
+}
+
+.program-filters__box--comments {
+  margin-bottom: 25px;
+}
+
+.program-filters__box--extra {
+  margin-bottom: 40px;
+}
+
+.program-filters__button {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 7px;
+  border: none;
+
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.program-filters__box--btn {
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .program-filters__box {
+    max-width: 1068px;
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .program-filters__wrapper {
+    margin-bottom: 77px;
+  }
+
+  .program-filters__box--profile {
+    margin-bottom: 51px;
+  }
+
+  .program-filters__box--contacts {
+    margin-bottom: 46px;
+  }
+
+  .program-filters__box--comments {
+    margin-bottom: 64px;
+  }
+
+  .program-filters__box--extra {
+    margin-bottom: 10px;
+  }
+
+  .program-filters__box--btn {
+    display: flex;
+    padding-left: 9.1%;
+  }
+
+  .program-filters__button {
+    width: 283px;
+    padding: 16px 0;
+    margin-right: 62px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program-filters__necessarily {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-filters__wrapper {
+    width: 93.8%;
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-bottom: 51px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .program-filters__box {
+    margin: 0;
+    width: 46.7%;
+  }
+
+  .program-filters .program-filters__box--contacts {
+    margin-bottom: 48px;
+  }
+
+  .program-filters .program-filters__box--comments {
+    margin-bottom: 67px;
+  }
+
+  .program-filters .program-filters__box--extra {
+    margin-bottom: 19px;
+  }
+
+  .program-filters__box--btn {
+    width: 93.8%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .program-filters__button {
+    width: 570px;
+    margin-right: 81px;
+  }
+}

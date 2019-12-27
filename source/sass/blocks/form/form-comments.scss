@@ -1,0 +1,102 @@
+.form-comments__title {
+  margin-bottom: 34px;
+}
+
+.form-comments__cat {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px 13px;
+  border: 1px solid $form-grey;
+  box-sizing: border-box;
+
+  color: $color-text;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form-comments__cat::-webkit-input-placeholder {
+  color: $color-text;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form-comments__cat::-moz-placeholder {
+  color: $color-text;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}/* Firefox 19+ */
+
+.form-comments__cat:-moz-placeholder {
+  color: $color-text;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}/* Firefox 18- */
+
+.form-comments__cat:active,
+.form-comments__cat:focus {
+  box-shadow: inset 2px -2px 0 0 $color-text,
+              inset -2px 2px 0 0 $color-text;
+  outline: none;
+}
+
+@media (min-width: $tablet-width) {
+  .form-comments__title {
+    margin-bottom: 76px;
+  }
+
+  .form-comments__cat {
+    display: block;
+    padding: 10px 19px;
+    width: 89.2%;
+    margin: 0 auto;
+    min-height: 175px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form-comments__cat::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form-comments__cat::-moz-placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }/* Firefox 19+ */
+
+  .form-comments__cat:-moz-placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }/* Firefox 18- */
+
+  .form-comments__cat:-ms-input-placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-comments {
+    width: 93.8%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .form-comments__cat {
+    margin: 0;
+    width: 100%;
+  }
+}

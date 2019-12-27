@@ -1,0 +1,144 @@
+.cat-profile {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.cat-profile__item {
+  margin-bottom: 12px;
+}
+
+.cat-profile__item label {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $dark-grey;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cat-profile__item input {
+  flex-grow: 1;
+  width: 50%;
+  flex-shrink: 0;
+  min-height: 46px;
+  padding:  0 15px;
+  margin-left: 5%;
+
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  border: 1px solid $form-grey;
+  box-sizing: border-box;
+}
+
+.cat-profile__item--contacts input {
+  margin-left: 3.7%;
+}
+
+.cat-profile__icon {
+  position: absolute;
+  padding-top: 2px;
+  right: 13px;
+}
+
+.cat-profile__icon--email {
+  right: 15px;
+}
+
+.cat-profile__item--contacts input:hover + .cat-profile__icon {
+  fill: $bg-green;
+}
+
+.cat-profile__item input:invalid {
+  box-shadow: inset 2px -2px 0 0 $form-invalid,
+              inset -2px 2px 0 0 $form-invalid;
+  outline: none;
+}
+
+.cat-profile__item input:invalid + .cat-profile__icon {
+  fill: $form-invalid;
+}
+
+.cat-profile__item input:active,
+.cat-profile__item input:focus {
+  box-shadow: inset 2px -2px 0 0 $color-text,
+              inset -2px 2px 0 0 $color-text;
+  outline: none;
+}
+
+@media (min-width: $tablet-width) {
+  .cat-profile {
+    margin-left: 5.7%;
+    margin-right: 5.2%;
+  }
+
+  .cat-profile__item {
+    margin-bottom: 19px;
+  }
+
+  .cat-profile__item label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .cat-profile__item input {
+    padding: 10px 19px;
+    margin-left: 2.8%;
+    min-height: 53px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .cat-profile__item--contacts input {
+    margin-left: 2.4%;
+  }
+
+  .cat-profile__icon {
+    right: 15px;
+  }
+
+  .cat-profile__icon--email {
+    right: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cat-profile {
+    margin: 0;
+  }
+
+  .cat-profile--contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .cat-profile__item--contacts {
+    width: 46.7%;
+  }
+
+  .cat-profile__item--contacts input {
+    margin-left: 3%;
+  }
+
+  .cat-profile__icon {
+    right: 18px;
+  }
+
+  .cat-profile__icon--email {
+    right: 19px;
+  }
+}

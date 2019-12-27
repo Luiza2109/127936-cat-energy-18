@@ -1,0 +1,252 @@
+.catalog {
+  width: 87.5%;
+  margin: 0 auto;
+}
+
+.catalog__wrapper {
+  min-height: 236px;
+  padding: 0 7%;
+  padding-top: 30px;
+  background-color: $catalog-bg-gray;
+}
+
+.catalog__wrapper--slim {
+  margin-bottom: 20px;
+}
+
+.catalog__caption {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 30px;
+  padding-left: 30.2%;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: $color-title;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 2px;
+    width: 50px;
+    height: 50px;
+    background-color: $bg-green;
+    border-radius: 50%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    background-repeat: no-repeat;
+  }
+}
+
+.catalog__caption--slim::before {
+  top: -9px;
+  left: 10px;
+  width: 35px;
+  height: 49px;
+  background-image: url("../img/cat-slim.svg");
+  background-size: 35px 49px;
+}
+
+.catalog__caption--pro::before {
+  top: 5px;
+  left: -7px;
+  width: 67px;
+  height: 28px;
+  background-image: url("../img/cat-pro.svg");
+  background-size: 67px 28px;
+}
+
+.catalog__text {
+  margin: 0;
+  width: 95%;
+  padding-bottom: 22px;
+  border-bottom: 1px solid $light-grey;
+}
+
+.catalog__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px 0;
+  padding-right: 45px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-title;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 9px;
+
+    width: 24px;
+    height: 15px;
+
+    background: url("../img/right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 33px 15px;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::after {
+    right: 0;
+    width: 33px;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+    outline: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    max-width: 1068px;
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .catalog__wrapper {
+    min-height: auto;
+    padding: 0 7.5%;
+    padding-top: 76px;
+  }
+
+  .catalog__wrapper--slim {
+    margin-bottom: 30px;
+  }
+
+  .catalog__caption {
+    padding-left: 0;
+    margin-bottom: 25px;
+    font-size: 36px;
+    line-height: 37px;
+
+    &::after {
+      top: 15px;
+      left: 65.4%;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .catalog__caption--slim::before {
+    top: 3px;
+    left: 70%;
+    width: 140px;
+    height: 194px;
+    background-size: 140px 194px;
+  }
+
+  .catalog__caption--pro::before {
+    top: 60px;
+    left: 59.6%;
+    width: 269px;
+    height: 111px;
+    background-image: url("../img/cat-pro.svg");
+    background-size: 269px 111px;
+  }
+
+  .catalog__text {
+    width: 57%;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+  }
+
+  .catalog__wrapper--slim .catalog__text {
+    width: 64%;
+  }
+
+  .catalog__link {
+    padding: 34px 0;
+    padding-bottom: 61px;
+    padding-right: 56px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      height: 20px;
+
+      background-size: 33px 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    max-width: 1920px;
+    width: 93.8%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .catalog__wrapper {
+    /*width: 464px;*/
+    width: 38.1%;
+    padding: 0 4.3%;
+    padding-top: 78px;
+  }
+
+  .catalog__caption {
+    padding-left: 34.8%;
+    margin-bottom: 72px;
+    font-size: 36px;
+    line-height: 37px;
+
+    &::after {
+      top: -30px;
+      left: 0;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .catalog__caption--slim::before {
+    top: -37px;
+    left: 13px;
+    width: 70px;
+    height: 97px;
+    background-size: 70px 97px;
+  }
+
+  .catalog__caption--pro::before {
+    top: -9px;
+    left: -18px;
+    width: 134px;
+    height: 56px;
+    background-image: url("../img/cat-pro.svg");
+    background-size: 134px 56px;
+  }
+
+  .catalog__text {
+    width: auto;
+    padding-bottom: 0;
+  }
+
+  .catalog__wrapper--slim .catalog__text {
+    width: auto;
+  }
+
+  .catalog__wrapper--slim {
+    margin-bottom: 0;
+  }
+
+  .catalog__link {
+    padding-top: 33px;
+    padding-bottom: 60px;
+  }
+}

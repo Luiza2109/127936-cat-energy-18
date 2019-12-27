@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>Cat Energy - подбор программы</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="page-header page-header--catalog page-header--closed page-header--nojs">
+    <nav class="page-header__nav">
+      <div class="page-header__wrapper">
+        <a href="index.html" class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" width="192" height="38" alt="Логотип «Cat Energy»">
+          </picture>
+        </a>
+        <button class="page-header__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+      <ul class="page-header__list site-list site-list--catalog">
+        <li class="site-list__item">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="site-list__item   site-list__item--active">
+          <a>Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-form">
+    <div class="page-form__wrapper">
+      <h1 class="page-form__title">Подбор программы</h1>
+      <p class="page-form___text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    </div>
+    <section class="page-form__filters program-filters">
+      <h2 class="visually-hidden">Форма программа питания</h2>
+      <form class="program-filters__form" action="https://echo.htmlacademy.ru" method="get">
+        <div class="program-filters__wrapper">
+          <fieldset class="program-filters__box program-filters__box--profile">
+            <legend class="visually-hidden">Анкета кота</legend>
+            <ul class="program-filters__list cat-profile">
+              <li class="cat-profile__item">
+                <label>Имя:*<input type="text" name="cat-name" placeholder="Барсик" required=""></label>
+              </li>
+              <li class="cat-profile__item">
+                <label>Вес (кг):*<input type="number" min="0" name="cat-weight" placeholder="7" required=""></label>
+              </li>
+              <li class="cat-profile__item">
+                <label>Возраст (лет):<input type="number" min="0" name="cat-age" placeholder="7"></label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="program-filters__box program-filters__box--program">
+            <legend class="visually-hidden">Выбрать программу питания</legend>
+            <ul class="program-filters__list form-filter">
+              <li class="form-filter__item">
+                <input type="radio" class="form-filter__input form-filter__input--radio" name="program-food" value="slim" id="program-slim" checked="">
+                <label for="program-slim">Похудение</label>
+              </li>
+              <li class="form-filter__item">
+                <input type="radio" class="form-filter__input form-filter__input--radio" name="program-food" value="pro" id="program-pro">
+                <label for="program-pro">Набор массы</label>
+              </li>
+              <li class="form-filter__item">
+                <input type="radio" class="form-filter__input form-filter__input--radio" name="program-food" value="unknown" id="program-unknown">
+                <label for="program-unknown">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="program-filters__box program-filters__box--contacts contacts">
+          <legend class="contacts__title title-decor">Контактные данные (владельца кота)</legend>
+          <ul class="cat-profile cat-profile--contacts">
+            <li class="cat-profile__item cat-profile__item--contacts">
+              <label>E-mail:*<input type="email" name="cat-email" placeholder="kuklachev@gmail.com" required="">
+                <svg class="cat-profile__icon cat-profile__icon--email" width="17" height="13">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+              </label>
+            </li>
+            <li class="cat-profile__item cat-profile__item--contacts">
+              <label>Телефон:*<input type="tel" name="cat-tel" placeholder="8 (960) 900-60-90" required="">
+                <svg class="cat-profile__icon cat-profile__icon--phone" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="program-filters__box program-filters__box--comments form-comments">
+          <legend class="form-comments__title title-decor">Комментарий</legend>
+          <textarea name="comments" id="comments-cat" class="form-comments__cat" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="program-filters__box program-filters__box--extra extra">
+          <legend class="extra__title title-decor">Дополнительно</legend>
+          <ul class="extra__filter form-filter">
+            <li class="form-filter__item form-filter__item--checkbox">
+              <input class="form-filter__input form-filter__input--checkbox" type="checkbox" name="sweetener" id="sweetener-filter" checked="">
+              <label for="sweetener-filter">Сахарозаменитель</label>
+            </li>
+            <li class="form-filter__item form-filter__item--checkbox">
+              <input class="form-filter__input form-filter__input--checkbox" type="checkbox" name="water" id="water-filter">
+              <label for="water-filter">Питьевая вода</label>
+            </li>
+            <li class="form-filter__item form-filter__item--checkbox">
+              <input class="form-filter__input form-filter__input--checkbox" type="checkbox" name="milk" id="milk-filter">
+              <label for="milk-filter">Молоко</label>
+            </li>
+            <li class="form-filter__item form-filter__item--checkbox">
+              <input class="form-filter__input form-filter__input--checkbox" type="checkbox" name="vitamins" id="vitamins-filter">
+              <label for="vitamins-filter">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="program-filters__box program-filters__box--btn">
+          <input class="program-filters__button button" type="submit" value="Отправить заявку">
+          <p class="program-filters__necessarily">* — Обязательные поля</p>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="page-footer page-footer--catalog">
+    <section class="page-footer__contacs contacs">
+      <div class="contacs__wrapper">
+        <p class="contacs__advertising">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacs__address">ул. Большая Конюшенная, д. 19/8 <span class="contacs__city">Санкт-Петербург</span></p>
+      </div>
+      <div class="contacs__map-wrapper">
+        <div class="contacs__map-box" id="map" aria-label="Карта"></div>
+        <picture>
+          <source type="image/webp" srcset="img/map-pin.webp">
+          <img src="img/map-pin.png" class="contacs__map-pin" alt="Метка на карте">
+        </picture>
+        <picture>
+          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+          <img src="img/bg-map-mobile@1x.png" class="contacs__map" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </picture>
+      </div>
+    </section>
+    <section class="page-footer__info info">
+      <div class="info__wrapper">
+        <a class="info__logo-link">
+          <img src="img/logo-footer.svg" class="info__logo" alt="логотип" width="128" height="24">
+        </a>
+        <ul class="info__list social">
+          <li class="social__item">
+            <a href="https://vk.com/htmlacademy" class="social__link" target="_blank" rel="noopener" aria-label="Мы в вконтакте">
+              <svg class="social__item-icon social__item-icon--vk" width="22" height="12">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.instagram.com/htmlacademy" class="social__link" target="_blank" rel="noopener" aria-label="Мы в инстаграмм">
+              <svg class="social__item-icon social__item-icon--inst" width="16" height="16">
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.facebook.com/htmlacademy" class="social__link" target="_blank" rel="noopener" aria-label="Мы в фейсбуке">
+              <svg class="social__item-icon social__item-icon--fb" width="10" height="19">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="info__htmlacademy htmlacademy">
+          <span class="htmlacademy__logo">HTML Academy</span>
+          <svg class="htmlacademy__logo" width="33" height="40">
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/picturefill.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=5619cc94-6f2c-4dea-b206-67998c99318f&lang=ru_RU" type="text/javascript"></script>
+  <script src="js/map.js"></script>
+  <script src="js/svgxuse.js" defer=""></script>
+</body>
+</html>
