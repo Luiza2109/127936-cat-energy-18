@@ -1,0 +1,247 @@
+.features__wrapper {
+  width: 87.5%;
+  margin: 0 auto;
+}
+
+.features__title {
+  margin: 0;
+  margin-bottom: 29px;
+
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 60px;
+  color: $color-title;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.features__item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 2px;
+  min-height: 58px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $bg-green;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.features__item--healthy::after {
+  top: 14px;
+  left: 17px;
+  width: 26px;
+  height: 31px;
+  background-image: url("../../../img/advantage-leaf@1x.png");
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/advantage-leaf@2x.png");
+    background-size: 50px 50px;
+  }
+}
+
+.features__item--type::after {
+  top: 12px;
+  left: 13px;
+  width: 31px;
+  height: 33px;
+  background-image: url("../../../img/advantage-powder@1x.png");
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/advantage-powder@2x.png");
+    background-size: 50px 50px;
+  }
+}
+
+.features__item--function::after {
+  top: 15px;
+  left: 18px;
+  width: 23px;
+  height: 30px;
+  background-image: url("../../../img/advantage-dining@1x.png");
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/advantage-dining@2x.png");
+    background-size: 48px 53px;
+  }
+}
+
+.features__item--changes::after {
+  top: 15px;
+  left: 17px;
+  width: 26px;
+  height: 31px;
+  background-image: url("../../../img/advantage-clock@1x.png");
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/advantage-clock@2x.png");
+    background-size: 52px 48px;
+  }
+}
+
+.features__text {
+  margin: 0;
+  padding-left: 80px;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding-bottom: 11px;
+    border-bottom: 1px solid $light-grey;
+  }
+
+  .features__wrapper {
+    /*width: 708px;*/
+    max-width: 1068px;
+    width: 92%;
+  }
+
+  .features__title {
+    margin-bottom: 31px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .features__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .features__item {
+    margin: 0;
+    padding: 0;
+    width: 45.8%;
+    min-height: auto;
+
+    &::before {
+      top: 41px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .features__item--healthy::after {
+    top: 65px;
+    left: 26px;
+  }
+
+  .features__item--type::after {
+    top: 66px;
+    left: 24px;
+  }
+
+  .features__item--function::after {
+    top: 68px;
+    left: 28px;
+  }
+
+  .features__item--changes::after {
+    top: 67px;
+    left: 27px;
+  }
+
+  .features__text {
+    position: relative;
+    z-index: 100;
+    padding: 0;
+    padding-top: 153px;
+    padding-bottom: 91px;
+    width: 80%;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 2px;
+      left: 43.7%;
+      font-family: "Oswald", "Tahoma", sans-serif;
+      font-weight: 400;
+      font-size: 283px;
+      line-height: 283px;
+      color: $catalog-bg-gray;
+    }
+  }
+
+  .features__text--healthy::after {
+    content: "1";
+    left: 45%;
+  }
+
+  .features__text--type::after {
+    content: "2";
+  }
+
+  .features__text--function::after {
+    content: "3";
+  }
+
+  .features__text--changes::after {
+    content: "4";
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .features__wrapper {
+    width: 93.8%;
+    max-width: 1920px;
+  }
+
+  .features__list {
+    justify-content: flex-start;
+  }
+
+  .features__item {
+    width: 20.1%;
+    margin-right: 6.5%;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  .features__text {
+    width: 100%;
+
+    &::after {
+      left: 46%;
+    }
+  }
+
+  .features__text--healthy::after {
+    left: 47%;
+  }
+}

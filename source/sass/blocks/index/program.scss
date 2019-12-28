@@ -1,0 +1,141 @@
+.program {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  min-height: 480px;
+  background-image: url("../img/index-bg-mobile@1x.jpg"), linear-gradient(to top, transparent 0, $index-bg-green 0);
+  background-repeat: no-repeat;
+  background-size: auto 305px;
+  background-position: top center;
+  border-top: 1px solid $light-grey;
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-bg-mobile@2x.jpg"), linear-gradient(to top, transparent 0, $index-bg-green 0);
+    background-size: auto 305px;
+  }
+}
+
+.program__title {
+  position: relative;
+  padding: 26px 0;
+  width: 80%;
+  margin: 0 auto;
+
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: $bg-white;
+}
+
+.program__slogan {
+  margin: 0;
+  margin-bottom: 27px;
+
+  font-family: "Oswald", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $bg-white;
+}
+
+.program__img {
+  width: 280px;
+  height: 270px;
+}
+
+.program__button {
+  margin: 0 auto;
+  margin-top: 0;
+  padding: 14px 0;
+  padding-bottom: 13px;
+  width: 87.5%;
+
+  font-size: 14px;
+  line-height: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .program {
+    position: relative;
+    max-width: 1068px;
+    min-height: 830px;
+    margin: 0 auto;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+  }
+
+  .program__title {
+    /*width: 427px;*/
+    width: 60.3%;
+    margin: 0 auto;
+    margin-left: 15%;
+    margin-top: 27px;
+    margin-bottom: 15px;
+
+    font-size: 60px;
+    line-height: 60px;
+    color: $color-title;
+  }
+
+  .program__slogan {
+    margin-left: 15.5%;
+    margin-bottom: 48px;
+    font-size: 20px;
+    line-height: 20px;
+    color: $color-title;
+  }
+
+  .program__img {
+    position: absolute;
+    bottom: -5px;
+    left: 30px;
+    width: 709px;
+    height: 609px;
+  }
+
+  .program__button {
+    position: relative;
+    z-index: 5;
+    width: auto;
+    padding: 15px 27px;
+    margin-left: 15.5%;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program {
+    max-width: 1920px;
+    min-height: 498px;
+  }
+
+  .program__title {
+    width: 35%;
+    margin-top: 80px;
+    margin-left: 9.2%;
+  }
+
+  .program__slogan {
+    margin-left: 9.3%;
+    margin-bottom: 52px;
+  }
+
+  .program__button {
+    margin-left: 9.3%;
+    padding: 15px 25px;
+  }
+
+  .program__img {
+    top: -56px;
+    left: 37.7%;
+    width: 552px;
+    height: 499px;
+  }
+}

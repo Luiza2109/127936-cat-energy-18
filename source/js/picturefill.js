@@ -1439,13 +1439,13 @@
     pf.fillImg = noop;
   } else {
 
-     // Set up picture polyfill by polling the document
+    // Set up picture polyfill by polling the document
     (function() {
       var isDomReady;
       var regReady = window.attachEvent ? /d$|^c/ : /d$|^c|^i/;
 
       var run = function() {
-        var readyState = document.readyState || "";
+      var readyState = document.readyState || "";
 
         timerId = setTimeout(run, readyState === "loading" ? 200 :  999);
         if ( document.body ) {

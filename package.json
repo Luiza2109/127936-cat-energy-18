@@ -1,32 +1,39 @@
 {
-  "name": "cat-energy-18",
-  "version": "17.0.0",
-  "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
-  "devDependencies": {
-    "autoprefixer": "9.5.x",
-    "browser-sync": "2.26.x",
-    "gulp": "4.0.x",
-    "gulp-plumber": "1.2.x",
-    "gulp-sourcemaps": "2.6.x",
-    "gulp-postcss": "8.0.x",
-    "gulp-sass": "4.0.x",
-    "@htmlacademy/editorconfig-cli": "1.x",
-    "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
-  },
-  "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp css",
-    "start": "gulp start"
-  },
   "browserslist": [
     "last 2 versions",
     "IE 11",
     "Firefox ESR"
   ],
+  "dependencies": {
+    "del": "^5.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "normalize.css": "^8.0.1",
+    "svgxuse": "^1.2.6"
+  },
+  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "8.0.x",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "2.6.x",
+    "gulp-sprite-generator": "^0.2.3",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "node-normalize-scss": "^8.0.0",
+    "pixel-glass": "^1.0.13",
+    "posthtml-include": "^1.2.0",
+    "stylelint": "10.1.x",
+    "stylelint-config-htmlacademy": "^0.1.4"
+  },
   "editorconfig-cli": [
     "*.json",
     "*.js",
@@ -37,5 +44,16 @@
   ],
   "engines": {
     "node": "8.16"
-  }
+  },
+  "license": "ISC",
+  "main": "gulpfile.js",
+  "private": true,
+  "scripts": {
+    "build": "gulp build",
+    "editorconfig": "editorconfig-cli",
+    "start": "gulp start",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint"
+  },
+  "version": "17.0.0"
 }

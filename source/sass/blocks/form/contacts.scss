@@ -1,0 +1,27 @@
+.contacts__title {
+  width: 73%;
+  margin-bottom: 33px;
+
+  &::before {
+    top: 25%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__title {
+    width: auto;
+    margin-bottom: 75px;
+
+    &::before {
+      top: 50%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    width: 93.8%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}

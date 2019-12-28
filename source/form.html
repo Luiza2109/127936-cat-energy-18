@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <title>Cat Energy - подбор программы</title>
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -48,13 +49,13 @@
             <legend class="visually-hidden">Анкета кота</legend>
             <ul class="program-filters__list cat-profile">
               <li class="cat-profile__item">
-                <label>Имя:*<input type="text" name="cat-name" placeholder="Барсик" required></label>
+                <label>Имя:*<input class="form-input" type="text" name="cat-name" placeholder="Барсик" required></label>
               </li>
               <li class="cat-profile__item">
-                <label>Вес (кг):*<input type="number" min="0" name="cat-weight" placeholder="7" required></label>
+                <label>Вес (кг):*<input class="form-input" type="number" min="0" name="cat-weight" placeholder="7" required></label>
               </li>
               <li class="cat-profile__item">
-                <label>Возраст (лет):<input type="number" min="0" name="cat-age" placeholder="7"></label>
+                <label>Возраст (лет):<input class="form-input" type="number" min="0" name="cat-age" placeholder="7"></label>
               </li>
             </ul>
           </fieldset>
@@ -62,15 +63,15 @@
             <legend class="visually-hidden">Выбрать программу питания</legend>
             <ul class="program-filters__list form-filter">
               <li class="form-filter__item">
-                <input type="radio" class="form-filter__input form-filter__input--radio" name="program-food" value="slim" id="program-slim" checked>
+                <input type="radio" class="form-input form-filter__input form-filter__input--radio" name="program-food" value="slim" id="program-slim" checked>
                 <label for="program-slim">Похудение</label>
               </li>
               <li class="form-filter__item">
-                <input type="radio" class="form-filter__input form-filter__input--radio" name="program-food" value="pro" id="program-pro">
+                <input type="radio" class="form-input form-filter__input form-filter__input--radio" name="program-food" value="pro" id="program-pro">
                 <label for="program-pro">Набор массы</label>
               </li>
               <li class="form-filter__item">
-                <input type="radio" class="form-filter__input form-filter__input--radio" name="program-food" value="unknown" id="program-unknown">
+                <input type="radio" class="form-input form-filter__input form-filter__input--radio" name="program-food" value="unknown" id="program-unknown">
                 <label for="program-unknown">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
@@ -80,14 +81,14 @@
           <legend class="contacts__title title-decor">Контактные данные (владельца кота)</legend>
           <ul class="cat-profile cat-profile--contacts">
             <li class="cat-profile__item cat-profile__item--contacts">
-              <label>E-mail:*<input type="email" name="cat-email" placeholder="kuklachev@gmail.com" required>
+              <label>E-mail:*<input class="form-input" type="email" name="cat-email" placeholder="kuklachev@gmail.com" required>
                 <svg class="cat-profile__icon cat-profile__icon--email" width="17" height="13">
                   <use xlink:href="img/sprite.svg#icon-mail"></use>
                 </svg>
               </label>
             </li>
             <li class="cat-profile__item cat-profile__item--contacts">
-              <label>Телефон:*<input type="tel" name="cat-tel" placeholder="8 (960) 900-60-90" required>
+              <label>Телефон:*<input class="form-input" type="tel" name="cat-tel" placeholder="8 (960) 900-60-90" required>
                 <svg class="cat-profile__icon cat-profile__icon--phone" width="20" height="20">
                   <use xlink:href="img/sprite.svg#icon-phone"></use>
                 </svg>
@@ -103,25 +104,25 @@
           <legend class="extra__title title-decor">Дополнительно</legend>
           <ul class="extra__filter form-filter">
             <li class="form-filter__item form-filter__item--checkbox">
-              <input class="form-filter__input form-filter__input--checkbox" type="checkbox" name="sweetener" id="sweetener-filter" checked>
+              <input class="form-input form-filter__input form-filter__input--checkbox" type="checkbox" name="sweetener" id="sweetener-filter" checked>
               <label for="sweetener-filter">Сахарозаменитель</label>
             </li>
             <li class="form-filter__item form-filter__item--checkbox">
-              <input class="form-filter__input form-filter__input--checkbox" type="checkbox" name="water" id="water-filter">
+              <input class="form-input form-filter__input form-filter__input--checkbox" type="checkbox" name="water" id="water-filter">
               <label for="water-filter">Питьевая вода</label>
             </li>
             <li class="form-filter__item form-filter__item--checkbox">
-              <input class="form-filter__input form-filter__input--checkbox" type="checkbox" name="milk" id="milk-filter">
+              <input class="form-input form-filter__input form-filter__input--checkbox" type="checkbox" name="milk" id="milk-filter">
               <label for="milk-filter">Молоко</label>
             </li>
             <li class="form-filter__item form-filter__item--checkbox">
-              <input class="form-filter__input form-filter__input--checkbox" type="checkbox" name="vitamins" id="vitamins-filter">
+              <input class="form-input form-filter__input form-filter__input--checkbox" type="checkbox" name="vitamins" id="vitamins-filter">
               <label for="vitamins-filter">Витамины</label>
             </li>
           </ul>
         </fieldset>
         <div class="program-filters__box program-filters__box--btn">
-          <input class="program-filters__button button" type="submit" value="Отправить заявку">
+          <input class="form-input program-filters__button button" type="submit" value="Отправить заявку">
           <p class="program-filters__necessarily">* — Обязательные поля</p>
         </div>
       </form>
@@ -130,7 +131,7 @@
   <footer class="page-footer page-footer--catalog">
     <section class="page-footer__contacs contacs">
       <div class="contacs__wrapper">
-        <p class="contacs__advertising">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacs__advertising">Приглашаем <br> к сотрудничеству дилеров!</p>
         <p class="contacs__address">ул. Большая Конюшенная, д. 19/8 <span class="contacs__city">Санкт-Петербург</span></p>
       </div>
       <div class="contacs__map-wrapper">
